@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CalculadoraDistancia.MainPage">
+  <ScrollView><VerticalStackLayout Padding="24,36" Spacing="16" MaximumWidthRequest="560" HorizontalOptions="Fill">
+    <Label Text="PROGRAMAÇÃO MOBILE" FontSize="12" FontAttributes="Bold" TextColor="{StaticResource Accent}" />
+    <Label Text="Distância entre pontos" FontSize="30" FontAttributes="Bold" />
+    <Label Text="Informe as coordenadas no plano cartesiano." TextColor="#52647B" />
+    <Border><VerticalStackLayout Spacing="10"><Label Text="Ponto A" FontAttributes="Bold"/><Grid ColumnDefinitions="*,*" ColumnSpacing="12"><Entry x:Name="X1" Placeholder="X₁" Keyboard="Text" ClearButtonVisibility="WhileEditing" /><VerticalStackLayout Grid.Column="1"><Entry x:Name="Y1" Placeholder="Y₁" Keyboard="Text" ClearButtonVisibility="WhileEditing" /></VerticalStackLayout></Grid></VerticalStackLayout></Border>
+    <Border><VerticalStackLayout Spacing="10"><Label Text="Ponto B" FontAttributes="Bold"/><Grid ColumnDefinitions="*,*" ColumnSpacing="12"><Entry x:Name="X2" Placeholder="X₂" Keyboard="Text" ClearButtonVisibility="WhileEditing" /><VerticalStackLayout Grid.Column="1"><Entry x:Name="Y2" Placeholder="Y₂" Keyboard="Text" ClearButtonVisibility="WhileEditing" /></VerticalStackLayout></Grid></VerticalStackLayout></Border>
+    <Label Text="d = √((x₂ − x₁)² + (y₂ − y₁)²)" HorizontalTextAlignment="Center" TextColor="#52647B" />
+    <Button Text="Calcular Distância" Clicked="OnCalculate" />
+    <Border><VerticalStackLayout Spacing="6"><Label Text="RESULTADO" FontSize="12" FontAttributes="Bold"/><Label x:Name="Result" Text="—" FontSize="26" FontAttributes="Bold" TextColor="{StaticResource Accent}"/><Label x:Name="Feedback" Text="Preencha os quatro campos." /></VerticalStackLayout></Border>
+    <Button Text="Limpar" BackgroundColor="#475569" Clicked="OnClear" />
+  </VerticalStackLayout></ScrollView>
+</ContentPage>
